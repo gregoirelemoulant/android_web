@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/greg/AndroidStudioProjects/android_web/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/Users/greg/AndroidStudioProjects/android_web/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.2.1_4adfcce6757a45607bf5e42b5453b1ebf276f149.jar" />
+    </item>
+    <item
+        jar="/Users/greg/AndroidStudioProjects/android_web/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="/Users/greg/AndroidStudioProjects/android_web/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.2.1_493bea58551d79e60b82c51b3fba2cba53cba41c.jar" />
+    </item>
+    <item
+        jar="/Users/greg/AndroidStudioProjects/android_web/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
+        <dex dex="/Users/greg/AndroidStudioProjects/android_web/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.2.1_5e3c6b5bfb291049c2ae5ecd72b1b1e60a59522c.jar" />
+    </item>
+    <item
+        jar="/Users/greg/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="/Users/greg/AndroidStudioProjects/android_web/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.1_3fda76289cf8c5f6b163808e7a718cbda81600c3.jar" />
+    </item>
+    <item
+        jar="/Users/greg/AndroidStudioProjects/android_web/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="/Users/greg/AndroidStudioProjects/android_web/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.2.1_53e9d391c45ec5247c7faac7b92bc327b7970702.jar" />
+    </item>
+    <item
+        jar="/Users/greg/AndroidStudioProjects/android_web/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e3885783ff8926ed9e2fdcd16816c2e1e73e7aee">
+        <dex dex="/Users/greg/AndroidStudioProjects/android_web/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.2.1_3fffd19cbf55fbfd96bc287d44c424cde3d90472.jar" />
+    </item>
+    <item
+        jar="/Users/greg/AndroidStudioProjects/android_web/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="72961d8b453b46e277702f18de9d210bc019e36e">
+        <dex dex="/Users/greg/AndroidStudioProjects/android_web/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.2.1_faf432d615c518adaeaa262966f084b3be2d6c9e.jar" />
+    </item>
+    <item
+        jar="/Users/greg/AndroidStudioProjects/android_web/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/Users/greg/AndroidStudioProjects/android_web/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.1_93152fd4be901b5f5bca9173bca22d35ece8f9f6.jar" />
+    </item>
+
+</items>
