@@ -4,7 +4,8 @@
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingTop="@dimen/activity_vertical_margin" app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="package com.example.greg.MainActivity" tools:showIn="@layout/activity_main">
+    tools:context="package com.example.greg.MainActivity" tools:showIn="@layout/activity_main"
+    android:background="@drawable/sport_land">
 
     <!--
     <TextView
@@ -12,16 +13,57 @@
     -->
     <Button android:id="@+id/button2"
         android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Replace Fragment"
-        />
-    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/gridLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:columnCount="14" android:rowCount="12" android:layout_below="@id/button2">
+        android:nestedScrollingEnabled="false" />
 
-    </GridLayout>
     <FrameLayout
-    android:layout_width="100dp" android:layout_height="250dp" android:layout_alignRight="@id/gridLayout1" android:layout_below="@id/button2" android:id="@+id/myFrame2" >
-    <TextView android:layout_width="match_parent" android:layout_height="40dp" android:background="#ffff00"/>
-    <TextView android:layout_width="match_parent" android:layout_height="40dp" android:background="#110000" android:layout_gravity="bottom"/>
-</FrameLayout> </RelativeLayout>
+    android:layout_width="match_parent" android:layout_height="match_parent"
+        android:id="@+id/myFrame2"
+        android:layout_alignParentTop="true">
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="110dp"
+            android:id="@+id/mapButton"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:src="@drawable/pin"
+            android:adjustViewBounds="false"
+            android:background="#81ffffff"
+            android:layout_rowWeight="1"
+            android:layout_rowSpan="1"
+            android:layout_columnWeight="0"
+            android:layout_gravity="left"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="5dp" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="110dp"
+            android:id="@+id/statButton"
+            android:layout_gravity="right|top"
+            android:src="@drawable/arrow"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="5dp"
+            android:background="#81ffffff" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="110dp"
+            android:id="@+id/exchangeButton"
+            android:layout_gravity="right"
+            android:src="@drawable/arrows"
+            android:layout_marginRight="145dp"
+            android:background="#81ffffff"
+            android:layout_marginTop="100dp" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="110dp"
+            android:id="@+id/messageButton"
+            android:src="@drawable/black"
+            android:background="#81ffffff"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="145dp"
+            android:layout_marginTop="100dp" />
+    </FrameLayout> </RelativeLayout>
 
