@@ -3,6 +3,7 @@ package com.example.greg.web;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 import java.net.URI;
 
@@ -22,8 +24,10 @@ import java.net.URI;
 public class MainActivity extends AppCompatActivity implements firstFragment.OnFragmentInteractionListener {
 
     private static int i;
-    private Button b;
+    private Button b ;
+    private ImageButton bMap;
     private firstFragment first;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements firstFragment.OnF
 
 
         b = (Button) findViewById(R.id.button2);
+
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,7 +70,24 @@ public class MainActivity extends AppCompatActivity implements firstFragment.OnF
         });
 
 
+        bMap =(ImageButton) findViewById(R.id.mapButton);
+
+        bMap.setOnClickListener( new View.OnClickListener() {
+
+                @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(MainActivity.this, MapsActivity.class);
+                        startActivity(intent);
+                    }
+                });
+
+
+
+
+
+
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -106,3 +128,4 @@ public class MainActivity extends AppCompatActivity implements firstFragment.OnF
         System.out.println("Fragment Test");
     }
 }
+
