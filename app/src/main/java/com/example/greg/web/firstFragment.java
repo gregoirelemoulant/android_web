@@ -38,8 +38,8 @@ public class firstFragment extends Fragment {
         firstFragment fragment = new firstFragment(); Bundle args = new Bundle(); args.putString(ARG_PARAM1, param1); args.putString(ARG_PARAM2, param2); fragment.setArguments(args);
         return fragment; }
     @Override
-    public void onCreate(Bundle savedInstanceState) { super.onCreate(savedInstanceState); Toast.makeText(getContext(), "onCreate Fragment",
-            Toast.LENGTH_LONG).show();
+    public void onCreate(Bundle savedInstanceState) { super.onCreate(savedInstanceState); //Toast.makeText(getContext(), "onCreate Fragment",
+           // Toast.LENGTH_LONG).show();
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2); }
@@ -67,9 +67,9 @@ public class firstFragment extends Fragment {
     @Override
     public void onAttach(Context context) { super.onAttach(context);
 
- Toast.makeText(getContext(), "onAttach Fragment",
+ //Toast.makeText(getContext(), "onAttach Fragment",
 
-        Toast.LENGTH_LONG).show();
+      //  Toast.LENGTH_LONG).show();
         if (context instanceof OnFragmentInteractionListener) { mListener = (OnFragmentInteractionListener) context;
         } else {
             throw new RuntimeException(context.toString()+ " must implement OnFragmentInteractionListener");
@@ -77,8 +77,8 @@ public class firstFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
-Toast.makeText(getContext(), "onDetach Fragment",
-        Toast.LENGTH_LONG).show();
+//Toast.makeText(getContext(), "onDetach Fragment",
+     //   Toast.LENGTH_LONG).show();
         mListener = null; }
     /**
      * This interface must be implemented by activities that contain this
