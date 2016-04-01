@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements firstFragment.OnF
 
     private static int i;
     private Button b ;
-    private ImageButton bMap;
+    private ImageButton bMap, bStat;
     private firstFragment first;
 
 
@@ -82,6 +82,18 @@ public class MainActivity extends AppCompatActivity implements firstFragment.OnF
                 });
 
 
+
+
+        bStat =(ImageButton) findViewById(R.id.statButton);
+
+        bStat.setOnClickListener( new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, HttpURLConnection.class);
+                startActivity(intent);
+            }
+        });
 
 
 
