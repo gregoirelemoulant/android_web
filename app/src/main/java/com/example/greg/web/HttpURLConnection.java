@@ -29,7 +29,7 @@ public class HttpURLConnection extends AppCompatActivity {
         setContentView(R.layout.activity_http_urlconnection);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        new DownloadTask().execute("http://10.5.207.205:8888/Accounts/pageconnexion");
+        new DownloadTask().execute(getString(R.string.addDeviceHttp));
 
     }
 
