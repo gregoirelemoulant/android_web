@@ -10,7 +10,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.greg.web.HttpURLConnection"
-    tools:showIn="@layout/activity_http_urlconnection">
+    tools:showIn="@layout/activity_http_urlconnection"
+    android:background="#c4e3cb">
 
 
     <ImageButton
@@ -26,10 +27,9 @@
         android:layout_rowSpan="1"
         android:layout_columnWeight="0"
         android:layout_gravity="left"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="161dp" />
+        android:layout_alignParentStart="true" />
 
     <ImageButton
         android:layout_width="130dp"
@@ -42,5 +42,27 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="76dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textStats"
+        android:text="@string/accederStat"
+        android:layout_above="@+id/statButton" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/saveMyDevice"
+        android:id="@+id/textView"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
 
 </RelativeLayout>

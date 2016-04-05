@@ -150,6 +150,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * installed Google Play services and returned to the app.
      */
     @Override
+
     public void onMapReady(GoogleMap googleMap) {
 
 
@@ -157,7 +158,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         // Add a marker in Sydney and move the camera
         LatLng maPosition = new LatLng(lat, lng);
+
         mMap.addMarker(new MarkerOptions().position(maPosition).title("ma position"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(maPosition));
+
     }
+
 }

@@ -4,9 +4,14 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -19,9 +24,7 @@ import java.net.URL;
 
 public class HttpURLConnection extends AppCompatActivity {
 
-
-
-
+ImageButton bDevice  ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -29,9 +32,21 @@ public class HttpURLConnection extends AppCompatActivity {
         setContentView(R.layout.activity_http_urlconnection);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        new DownloadTask().execute(getString(R.string.addDeviceHttp));
+
+        bDevice =(ImageButton) findViewById(R.id.deviceButton);
+        bDevice.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(HttpURLConnection.this,"Votre device est ajouté",Toast.LENGTH_LONG).show();
+                new DownloadTask().execute(getString(R.string.addDeviceHttp));
+
+            }
+        });
+
 
     }
+
 
     private class DownloadTask extends AsyncTask<String, Void, String> {
 
@@ -54,7 +69,6 @@ public class HttpURLConnection extends AppCompatActivity {
 
         try {
             stream = downloadUrl(urlString);
-
         } finally {
             if (stream != null) {
                 stream.close();
@@ -76,6 +90,7 @@ public class HttpURLConnection extends AppCompatActivity {
         // Start the query
         conn.connect();
         InputStream stream = conn.getInputStream();
+
         try {
             parseJsonFile(stream);
         } catch (Exception e) {

@@ -6,6 +6,7 @@ import android.app.FragmentManager;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -19,14 +20,16 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 import java.net.URI;
+import java.util.Locale;
 
 
-public class MainActivity extends AppCompatActivity implements firstFragment.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity{
 
     private static int i;
     private Button b ;
-    private ImageButton bMap, bStat;
-    private firstFragment first;
+    private ImageButton bMap, bStat,bConnection;
+    Configuration config;
+
 
 
     @Override
@@ -35,39 +38,15 @@ public class MainActivity extends AppCompatActivity implements firstFragment.OnF
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        first = firstFragment.newInstance("first fragment", "you");
-
-        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT)
-            getFragmentManager().beginTransaction().add(R.id.myFrame, first).commit();
+        config=new Configuration(getResources().getConfiguration());
 
 
-        b = (Button) findViewById(R.id.button2);
-
-        b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                i++;
-                firstFragment second = firstFragment.newInstance("second fragment " + i, "you");
-                android.app.FragmentTransaction fgt = getFragmentManager().beginTransaction();
-                fgt.addToBackStack("new fragment");
 
 
-                // important code for orientation based adaptation
 
-                if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
-                    Toast.makeText(getApplicationContext(), "myFrame Replacement", Toast.LENGTH_SHORT).show();
 
-                    fgt.replace(R.id.myFrame, second).commit();
-                } else {
-                    fgt.replace(R.id.myFrame2, second).commit();
-                    Toast.makeText(getApplicationContext(), "myFrame2 Replacement", Toast.LENGTH_SHORT).show();
-                    System.out.println("myFrame2 replacement");
-                }
 
-                //Toast.makeText(getBaseContext(), "Button Click", Toast.LENGTH_SHORT).show();
-            }
-        });
+
 
 
         bMap =(ImageButton) findViewById(R.id.mapButton);
@@ -96,7 +75,16 @@ public class MainActivity extends AppCompatActivity implements firstFragment.OnF
         });
 
 
+        bConnection =(ImageButton) findViewById(R.id.exchangeButton);
 
+        bConnection.setOnClickListener( new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -110,6 +98,8 @@ public class MainActivity extends AppCompatActivity implements firstFragment.OnF
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
+
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
@@ -125,19 +115,35 @@ public class MainActivity extends AppCompatActivity implements firstFragment.OnF
 
             case R.id.action_refresh:
                 Toast.makeText(this, "Refresh selected", Toast.LENGTH_LONG).show();
+
                 return true;
 
-            case R.id.action_third:
-                Toast.makeText(this, "Third selected", Toast.LENGTH_LONG).show();
+            case R.id.action_english:
+                Toast.makeText(this, "language english selected", Toast.LENGTH_LONG).show();
+
+                config=new Configuration(getResources().getConfiguration());
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                    config.setLocale(Locale.ENGLISH);
+                }
+                return true;
+
+
+            case R.id.action_francais:
+                Toast.makeText(this, "language français selected", Toast.LENGTH_LONG).show();
+                config=new Configuration(getResources().getConfiguration());
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                    config.setLocale(Locale.FRENCH);
+                }
                 return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onFragmentInteraction(Object obj) {
-        System.out.println("Fragment Test");
-    }
+
+
+
 }
+
+
 

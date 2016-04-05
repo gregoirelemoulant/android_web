@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">Ton manager de sport</string>
+    <string name="action_english">anglais</string>
+    <string name="action_french">francais</string>
+    <string name="action_refresh">rafraichir</string>
+    <string name="connection_error">Erreur de connection</string>
+    <string name="google_app_id"></string>
+    <string name="hello_blank_fragment"></string>
+    <string name="action_settings">Réglages</string>
+    <string name="accederStat">Accéder à mes Stats</string>
+    <string name="saveMyDevice">Ajouter mon Smartphone</string>
+
+</resources>
